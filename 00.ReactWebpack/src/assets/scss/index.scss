@@ -1,0 +1,23 @@
+@import './common/reset';
+
+@font-face {
+    font-family: 'Arita-dotum-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Arita-dotum-Medium'; font-size: 1rem;
+    background: #f3ede7;
+}
+
+.container{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    height: 100vh;
+}

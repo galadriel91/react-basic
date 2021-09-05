@@ -6,7 +6,9 @@ module.exports = {
     resolve:{
         extensions:['.js' , '.jsx' , '.scss' , '.module.scss' , '.css'],
         alias:{
-            Style:path.resolve('./src/assets/scss/')
+            Style:path.resolve('./src/assets/scss/'),
+            Img:path.resolve('./src/assets/image/'),
+            Components:path.resolve('./src/components/'),
         }
     },
     entry:{
@@ -20,6 +22,27 @@ module.exports = {
                 options:{
                     presets:['@babel/preset-env' , '@babel/preset-react']
                 }
+            },
+            {
+                test:/\.css$/,
+                use:['style-loader' , 'css-loader']
+            },
+            {
+                test:/\.scss$/,
+                use:['style-loader' , 'css-loader' , 'sass-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                          name: '[name].[contenthash].[ext]',
+                          outputPath: 'static/img',
+                          esModule: false
+                        }
+                    }
+                ],
             }
         ]
     },
