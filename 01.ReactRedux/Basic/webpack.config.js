@@ -9,6 +9,7 @@ module.exports = {
             Style:path.resolve('./src/assets/scss/'),
             Img:path.resolve('./src/assets/image/'),
             Components:path.resolve('./src/components/'),
+            Store:path.resolve('./src/store/'),
         }
     },
     entry:{
