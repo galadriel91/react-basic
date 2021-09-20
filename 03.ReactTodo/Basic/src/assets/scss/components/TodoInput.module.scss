@@ -1,0 +1,18 @@
+.form{
+    display: flex; align-items: center;
+    width: 100rem; height: 5rem; 
+    input{
+        width: 95%; height: 100%; background: #3295AD;
+        font-size: 1.6rem; color: #fff; text-indent: 2rem;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    button{
+        width: 5%; background: #306B7A; 
+        line-height: 5rem; font-size: 2rem; color: #fff; font-weight: bold; 
+    }
+}

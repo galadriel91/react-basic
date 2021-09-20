@@ -1,0 +1,17 @@
+.header{
+    width: 100rem; height: 6rem; background: #61dbfb;
+    border-radius: 1rem 1rem 0 0; text-align: center;
+    h1{
+        font-size: 3rem; font-weight: bold; color: #fff;
+        line-height: 6rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .header{
+        width: 100%; height: 5rem;
+        h1{
+            font-size: 2.5rem; line-height: 5rem;
+        }
+    }
+}
