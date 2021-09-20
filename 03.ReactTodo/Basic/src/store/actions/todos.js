@@ -5,6 +5,13 @@ const addTodo = (data) => {
     }
 }
 
+const getTodo = () => {
+    return{
+        type:'GET_TODO'
+    }
+}
+
 module.exports = {
-    addTodo
+    addTodo,
+    getTodo
 }
