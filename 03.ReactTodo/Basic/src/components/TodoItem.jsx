@@ -1,7 +1,15 @@
-import React from 'react';
+import React , { useCallback } from 'react';
 import Style from 'Style/components/TodoItem'
+import { useDispatch } from 'react-redux'
+import { removeTodo } from 'Store/actions/todos'
 
 const TodoItem = ({item}) => {
+    const dispatch = useDispatch()
+
+    const removeItem = useCallback(()=>{
+        dispatch(removeTodo(item.id))
+    },[])
+
     return ( 
         <li className={Style.li}>
             <div className={Style.itemWrap}>
@@ -13,7 +21,7 @@ const TodoItem = ({item}) => {
                     <h4>{item.title}</h4>
                 </div>
                 <div className={Style.buttonWrap}>
-                    <button className="xi-minus-square-o"></button>
+                    <button className="xi-minus-square-o" onClick={removeItem}></button>
                 </div>
             </div>
         </li>

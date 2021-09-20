@@ -11,7 +11,15 @@ const getTodo = () => {
     }
 }
 
+const removeTodo = (data) => {
+    return{
+        type:'REMOVE_TODO',
+        data
+    }
+}
+
 module.exports = {
     addTodo,
-    getTodo
+    getTodo,
+    removeTodo
 }

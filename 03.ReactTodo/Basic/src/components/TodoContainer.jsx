@@ -1,4 +1,4 @@
-import React ,{ useEffect } from 'react';
+import React , { useEffect } from 'react';
 import TodoItem from 'Components/TodoItem'
 import Style from 'Style/components/TodoContainer'
 import { useSelector , useDispatch } from 'react-redux'
@@ -16,7 +16,7 @@ const TodoContainer = () => {
     return ( 
         <ul className={Style.ul}>
             {
-                ITEMS.map(v=>(
+                ITEMS.map((v)=>(
                     <TodoItem item={v} key={v.id}/>
                 ))
             }
