@@ -1,4 +1,4 @@
-li{
+.li{
     height: 6rem; border-bottom: 1px solid #ddd;
     button{
         background: none; cursor: pointer; transition: all .5s;
@@ -16,7 +16,7 @@ li{
         height: 100%; display: flex; align-items: center;
         .checkWrap{
             width: 5%; text-align: center;
-            button.xi-checkbox-blank{
+            button{
                 font-size: 2.5rem; color: #000; line-height: 6rem;
             }
             button.xi-check-square-o{
